@@ -1,3 +1,59 @@
+/* 
+
+Ideas:  
+
+ex1 - Sun on cool sky - " Heat"
+ex2 - Eclipse
+ex3 - Moon on night sky
+ex4 - Slow gradient, interrupted by zebra striped columns
+ex5 - Slow gradient, interrupted by stripes of an opposing gradient
+ex6 - Opposing gradients, radial
+
+*/
+
+@font-face {
+  font-family: 'BarrioRegular';
+  src: url('https://fontlibrary.org/assets/fonts/barrio/7281088b662c310651e324f798e03bb0/8fd3ddbd649859dd936b083c5422a5b5/BarrioRegular.ttf') format('truetype');
+  src: url('/fonts/BarrioRegular.eot') format('embedded-opentype');
+  src: url('/fonts/BarrioRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+    }
+
 html {
-    box-sizing: border-box;
-  }
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+.ex-div {
+  height: 100vh;
+  width: 100vw;
+}
+
+
+#ex2,
+#ex3, 
+#ex4,
+#ex5,
+#ex6 {
+  display: none;
+}
+
+/* ex1 - Sun on cool sky - " Heat" */
+
+#ex1 {
+  background-image: radial-gradient(circle at right,#F02500, #FF6F00 50%,#f88a36 51%, #26A3D3 52%,#42B3DE, #B3C2E5);
+  display: flex; 
+  flex-direction: row-reverse;
+  align-items: center;
+  padding: 20px;
+}
+
+#ex1 label {
+  font: normal 20vw/1 'BarrioRegular', sans-serif;
+  color:  #FFFB71;
+  text-shadow: 0 0 10px #FFFB71;
+}
