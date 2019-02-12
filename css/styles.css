@@ -33,16 +33,7 @@ html {
   width: 100vw;
 }
 
-
-#ex2,
-#ex3, 
-#ex4,
-#ex5,
-#ex6 {
-  display: none;
-}
-
-/* ex1 - Sun on cool sky - " Heat" */
+/* ex1 - Heat */
 
 #ex1 {
   background-image: radial-gradient(circle at right,#F02500, #FF6F00 50%,#f88a36 51%, #26A3D3 52%,#42B3DE, #B3C2E5);
@@ -56,4 +47,31 @@ html {
   font: normal 20vw/1 'BarrioRegular', sans-serif;
   color:  #FFFB71;
   text-shadow: 0 0 10px #FFFB71;
+}
+
+/* ex2 - Eclipse */
+
+#ex2 {
+  background-image: radial-gradient(circle, #000, #000 10%, #fff 11%,  #E7FF71 25%, #71FFFF)
+}
+
+/* ex3 - Moonrise */
+
+#ex3 {
+  background-image: radial-gradient(circle at bottom, #ddd, #aaa 40%, #B10073 40%, #28015C)
+}
+
+/* ex4 - Slow gradient, interrupted by zebra striped columns */
+
+#ex4 {
+  background-image: linear-gradient(to right, #0E4698,#F4A8D9)
+}
+
+#ex1,
+#ex2,
+#ex3, 
+/* #ex4, */
+#ex5,
+#ex6 {
+  display: none;
 }
