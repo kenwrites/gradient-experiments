@@ -1,7 +1,7 @@
 // Input Variables
 
-var start_color_input = 'F4A8D9'
-var end_color_input = 'C40005'
+var start_color_input = '3608C8'
+var end_color_input = 'FFB100'
 var intervals = 10;
 
 // Script Variables
