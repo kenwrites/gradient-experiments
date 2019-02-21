@@ -1,21 +1,26 @@
-var red_color_stops = {}
-var green_color_stops = {}
-var blue_color_stops = {}
-var gradient = ''
-var start_color_input = '0E4698'
+// Input Variables
+
+var start_color_input = 'F4A8D9'
+var end_color_input = 'C40005'
+var intervals = 10;
+
+// Script Variables
+
 var start_colors = {}
-var end_color_input = 'F4A8D9'
 var end_colors = {}
 var color_objects = {}
 var color_ranges = {}
-var intervals = 10;
-var color_iterator = ["red", "green", "blue"]
 var all_color_stops = {
     red: '',
     green: '',
     blue: ''
 }
 var rgb_color_stops = []
+var gradient_statement = ''
+
+const ex4 = document.querySelector('#ex4')
+
+// Functions
 
 function parse_rgb(hex_value) {
     let colors = {
@@ -57,13 +62,10 @@ function make_color_stops(color) {
     let step
     let color_stops = []
     step = color_ranges[color] / intervals
-    // console.log("step = " + step)
     for (let i = 0; i < intervals; i++) {
         let color_stop
         color_stop = start_colors[color] + (step * i)
-        // console.log("color_stop = " + color_stop)
         color_stops.push(color_stop)
-        // console.log("color_stops = " + color_stops)
     }
     return color_stops
 }
@@ -76,23 +78,35 @@ function write_rgb(stop) {
     return rgb
 }
 
-// Extract individual color codes
+function write_gradient_statement() {
+    gradient_statement = "linear-gradient(to right"
+    let stripe = false   
+    for (let i = 0; i < rgb_color_stops.length; i++) {
+        if (stripe) {
+            stripe = !stripe
+            gradient_statement += ", " + rgb_color_stops[i] + " " + (intervals * i - 1) + "%"
+            gradient_statement += ", #fff " + (intervals * i) + "%"
+            gradient_statement += ", #fff " + (intervals * (i + 1) -1) + "%"
+        } else {
+            stripe = !stripe
+            gradient_statement += ", " + rgb_color_stops[i] + " " + (intervals * i) + "%"
+
+        }
+    }
+    gradient_statement += ")"
+}
+
+// Extract individual color codes and convert to decimal
 
 start_colors = parse_rgb(start_color_input)
 end_colors = parse_rgb(end_color_input)
-
-// Convert to decimal
-
 color_obj_to_decimal(start_colors)
 color_obj_to_decimal(end_colors)
 
-// Assign to color_objects, for input to get_color_ranges function
+// Get color ranges
 
 color_objects.start = start_colors
 color_objects.end = end_colors
-
-// Get color ranges
-
 color_ranges = get_color_ranges(color_objects)
 
 // Calculate color stops
@@ -101,12 +115,11 @@ for (var color in all_color_stops) {
     all_color_stops[color] = make_color_stops(color)
 }
 
-// Convert to RGB statements
+// Write gradient statement
 
 for (let i = 0; i < intervals; i++) {
     rgb_color_stops.push(write_rgb(i))
 }
-    
-// Write gradient statement 
-
+write_gradient_statement()
+ex4.style.backgroundImage = gradient_statement
 

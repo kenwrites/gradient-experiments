@@ -64,7 +64,9 @@ html {
 /* ex4 - Slow gradient, interrupted by zebra striped columns */
 
 #ex4 {
-  background-image: linear-gradient(to right, #0E4698,#F4A8D9)
+  background-image: linear-gradient(to right, rgb(196, 0, 5) 0%, rgb(200.8, 16.8, 26.2) 9%, #fff 10%, #fff 19%, rgb(205.6, 33.6, 47.4) 20%, rgb(210.4, 50.400000000000006, 68.6) 29%, #fff 30%, #fff 39%, rgb(215.2, 67.2, 89.8) 40%, rgb(220, 84, 111) 49%, #fff 50%, #fff 59%, rgb(224.8, 100.80000000000001, 132.2) 60%, rgb(229.6, 117.60000000000001, 153.4) 69%, #fff 70%, #fff 79%, rgb(234.4, 134.4, 174.6) 80%, rgb(239.2, 151.20000000000002, 195.79999999999998) 89%, #fff 90%, #fff 99%)
+  /* background-image: linear-gradient(to right, rgb(14, 70, 152) 0%, rgb(37, 79.8, 158.5) 9%, #fff 10%, #fff 19%, rgb(60, 89.6, 165) 20%, rgb(83, 99.4, 171.5) 29%, #fff 30%, #fff 39%, rgb(106, 109.2, 178) 40%, rgb(129, 119, 184.5) 49%, #fff 50%, #fff 59%, rgb(152, 128.8, 191) 60%, rgb(175, 138.60000000000002, 197.5) 69%, #fff 70%, #fff 79%, rgb(198, 148.4, 204) 80%, rgb(221, 158.2, 210.5) 89%, #fff 90%, #fff 99%)   */
+  /* background-image: linear-gradient(to right, #0E4698,#F4A8D9) */
 }
 
 #ex1,
