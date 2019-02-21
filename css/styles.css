@@ -70,9 +70,7 @@ Experiments
 
 #ex4 {
   display: flex;
-  background-image: linear-gradient(to right, rgb(196, 0, 5) 0%, rgb(200.8, 16.8, 26.2) 9%, #fff 10%, #fff 19%, rgb(205.6, 33.6, 47.4) 20%, rgb(210.4, 50.400000000000006, 68.6) 29%, #fff 30%, #fff 39%, rgb(215.2, 67.2, 89.8) 40%, rgb(220, 84, 111) 49%, #fff 50%, #fff 59%, rgb(224.8, 100.80000000000001, 132.2) 60%, rgb(229.6, 117.60000000000001, 153.4) 69%, #fff 70%, #fff 79%, rgb(234.4, 134.4, 174.6) 80%, rgb(239.2, 151.20000000000002, 195.79999999999998) 89%, #fff 90%, #fff 99%)
-  /* background-image: linear-gradient(to right, rgb(14, 70, 152) 0%, rgb(37, 79.8, 158.5) 9%, #fff 10%, #fff 19%, rgb(60, 89.6, 165) 20%, rgb(83, 99.4, 171.5) 29%, #fff 30%, #fff 39%, rgb(106, 109.2, 178) 40%, rgb(129, 119, 184.5) 49%, #fff 50%, #fff 59%, rgb(152, 128.8, 191) 60%, rgb(175, 138.60000000000002, 197.5) 69%, #fff 70%, #fff 79%, rgb(198, 148.4, 204) 80%, rgb(221, 158.2, 210.5) 89%, #fff 90%, #fff 99%)   */
-  /* background-image: linear-gradient(to right, #0E4698,#F4A8D9) */
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 247.2, 229.5) 9%, #fff 10%, #fff 19%, rgb(255, 239.4, 204) 20%, rgb(255, 231.6, 178.5) 29%, #fff 30%, #fff 39%, rgb(255, 223.8, 153) 40%, rgb(255, 216, 127.5) 49%, #fff 50%, #fff 59%, rgb(255, 208.2, 102) 60%, rgb(255, 200.4, 76.5) 69%, #fff 70%, #fff 79%, rgb(255, 192.6, 51) 80%, rgb(255, 184.8, 25.5) 89%, #fff 90%, #fff 99%);
 }
 
 #ex1,
@@ -106,7 +104,7 @@ form input {
   margin: 0 auto .5rem; 
 }
 
-form .form-text {
+.form-text {
   display: block;
   font-family: helvetica, arial, sans-serif;
   font-size: 1.25em;
@@ -123,7 +121,7 @@ form .form-label {
 
 }
 
-form button {
+.form-btn {
   margin: .5rem auto;
   border: none;
   border-radius: 1.25rem;

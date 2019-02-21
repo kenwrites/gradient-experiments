@@ -1,7 +1,7 @@
 // Input Variables
 
-var start_color_input = '3608C8'
-var end_color_input = 'FFB100'
+var start_color = '0932C6'
+var end_color = 'FFB100'
 var intervals = 10;
 
 // Script Variables
@@ -18,6 +18,12 @@ var all_color_stops = {
 var rgb_color_stops = []
 var gradient_statement = ''
 
+const start_color_input = document.querySelector('#start-color-input')
+const end_color_input = document.querySelector('#end-color-input')
+const stripes_input = document.querySelector('#stripes-input')
+const make_gradient_btn = document.querySelector('#make-gradient-btn')
+const hide_form_btn = document.querySelector('#hide-form-btn')
+const show_form_btn = document.querySelector('#show-form-btn')
 const ex4 = document.querySelector('#ex4')
 
 // Functions
@@ -79,47 +85,73 @@ function write_rgb(stop) {
 }
 
 function write_gradient_statement() {
+    let step
+    step = 100 / intervals
     gradient_statement = "linear-gradient(to right"
     let stripe = false   
-    for (let i = 0; i < rgb_color_stops.length; i++) {
+    for (let i = 0; i < rgb_color_stops.length; i++) {  
         if (stripe) {
             stripe = !stripe
-            gradient_statement += ", " + rgb_color_stops[i] + " " + (intervals * i - 1) + "%"
-            gradient_statement += ", #fff " + (intervals * i) + "%"
-            gradient_statement += ", #fff " + (intervals * (i + 1) -1) + "%"
+            gradient_statement += ", " + rgb_color_stops[i] + " " + (step * i - 1) + "%"
+            gradient_statement += ", #fff " + (step * i) + "%"
+            gradient_statement += ", #fff " + (step * (i + 1) -1) + "%"
         } else {
             stripe = !stripe
-            gradient_statement += ", " + rgb_color_stops[i] + " " + (intervals * i) + "%"
-
+            gradient_statement += ", " + rgb_color_stops[i] + " " + (step * i) + "%"
         }
     }
     gradient_statement += ")"
 }
 
-// Extract individual color codes and convert to decimal
-
-start_colors = parse_rgb(start_color_input)
-end_colors = parse_rgb(end_color_input)
-color_obj_to_decimal(start_colors)
-color_obj_to_decimal(end_colors)
-
-// Get color ranges
-
-color_objects.start = start_colors
-color_objects.end = end_colors
-color_ranges = get_color_ranges(color_objects)
-
-// Calculate color stops
-
-for (var color in all_color_stops) {
-    all_color_stops[color] = make_color_stops(color)
+function get_user_input() {
+    start_color = start_color_input.value 
+    end_color = end_color_input.value
+    intervals = stripes_input.value * 2
+    console.log("start color: " + start_color)
+    console.log("end color: " + end_color)
+    console.log("intervals: " + intervals)
 }
 
-// Write gradient statement
+function make_new_gradient() {
+    
+    // Extract individual color codes and convert to decimal
 
-for (let i = 0; i < intervals; i++) {
-    rgb_color_stops.push(write_rgb(i))
+    start_colors = parse_rgb(start_color)
+    end_colors = parse_rgb(end_color)
+    color_obj_to_decimal(start_colors)
+    color_obj_to_decimal(end_colors)
+
+    // Get color ranges
+
+    color_objects.start = start_colors
+    color_objects.end = end_colors
+    color_ranges = get_color_ranges(color_objects)
+
+    // Calculate color stops
+
+    for (var color in all_color_stops) {
+        all_color_stops[color] = make_color_stops(color)
+    }
+
+    // Write gradient statement
+
+    for (let i = 0; i < intervals; i++) {
+        rgb_color_stops.push(write_rgb(i))
+    }
+    console.log("intervals: " + intervals)
+    console.log("rgb_color_stops: " + rgb_color_stops)
+    write_gradient_statement()
+    console.log("gradient statement: " + gradient_statement)
+    ex4.style.backgroundImage = gradient_statement
+    rgb_color_stops = []
+
 }
-write_gradient_statement()
-ex4.style.backgroundImage = gradient_statement
 
+// Script
+
+make_new_gradient()
+
+make_gradient_btn.addEventListener('click', () => {
+    get_user_input()
+    make_new_gradient()
+})
