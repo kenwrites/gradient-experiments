@@ -6,8 +6,6 @@ ex1 - Sun on cool sky - " Heat"
 ex2 - Eclipse
 ex3 - Moon on night sky
 ex4 - Slow gradient, interrupted by zebra striped columns
-ex5 - Slow gradient, interrupted by stripes of an opposing gradient
-ex6 - Opposing gradients, radial
 
 */
 
@@ -73,12 +71,16 @@ Experiments
   background-image: linear-gradient(to right, rgb(255, 255, 255) 0%, rgb(255, 247.2, 229.5) 9%, #fff 10%, #fff 19%, rgb(255, 239.4, 204) 20%, rgb(255, 231.6, 178.5) 29%, #fff 30%, #fff 39%, rgb(255, 223.8, 153) 40%, rgb(255, 216, 127.5) 49%, #fff 50%, #fff 59%, rgb(255, 208.2, 102) 60%, rgb(255, 200.4, 76.5) 69%, #fff 70%, #fff 79%, rgb(255, 192.6, 51) 80%, rgb(255, 184.8, 25.5) 89%, #fff 90%, #fff 99%);
 }
 
-#ex1,
+#ex4-white-bg {
+  background-color: rgba(255, 255, 255, 0);
+  width: 100%;
+  transition: background-color .25s ease 0s;
+}
+
+
 #ex2,
 #ex3, 
-/* #ex4, */
-#ex5,
-#ex6 {
+#ex4, {
   display: none;
 }
 

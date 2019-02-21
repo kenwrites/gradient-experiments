@@ -22,9 +22,8 @@ const start_color_input = document.querySelector('#start-color-input')
 const end_color_input = document.querySelector('#end-color-input')
 const stripes_input = document.querySelector('#stripes-input')
 const make_gradient_btn = document.querySelector('#make-gradient-btn')
-const hide_form_btn = document.querySelector('#hide-form-btn')
-const show_form_btn = document.querySelector('#show-form-btn')
 const ex4 = document.querySelector('#ex4')
+const ex4_white_bg = document.querySelector('#ex4-white-bg')
 
 // Functions
 
@@ -113,7 +112,7 @@ function get_user_input() {
 }
 
 function make_new_gradient() {
-    
+
     // Extract individual color codes and convert to decimal
 
     start_colors = parse_rgb(start_color)
@@ -153,5 +152,9 @@ make_new_gradient()
 
 make_gradient_btn.addEventListener('click', () => {
     get_user_input()
-    make_new_gradient()
+    ex4_white_bg.style.backgroundColor = "rgba(255, 255, 255, 1)"
+    window.setTimeout( () => {
+        make_new_gradient()
+        ex4_white_bg.style.backgroundColor = "rgba(255, 255, 255, 0)"
+    }, 250)
 })
