@@ -1,22 +1,17 @@
-/* 
-
-Ideas:  
-
-ex1 - Sun on cool sky - " Heat"
-ex2 - Eclipse
-ex3 - Moon on night sky
-ex4 - Slow gradient, interrupted by zebra striped columns
-
-*/
-
 @font-face {
   font-family: 'BarrioRegular';
   src: url('https://fontlibrary.org/assets/fonts/barrio/7281088b662c310651e324f798e03bb0/8fd3ddbd649859dd936b083c5422a5b5/BarrioRegular.ttf') format('truetype');
-  src: url('/fonts/BarrioRegular.eot') format('embedded-opentype');
-  src: url('/fonts/BarrioRegular.woff') format('woff');
+  src: url('../fonts/BarrioRegular.eot') format('embedded-opentype');
+  src: url('../fonts/BarrioRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
     }
+
+
+
+/* ********************************************
+Main Styles
+******************************************** */
 
 html {
   box-sizing: border-box;
@@ -26,10 +21,58 @@ html {
   box-sizing: inherit;
 }
 
+#experiment-title {
+  /* center */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  /* appearance */
+  background-color: rgba(53, 53, 53, 0.9);
+  box-shadow: 0 0 1px #fff;
+  border-radius: 4px;
+
+  /* text */
+  color: white;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.75em;
+  text-align: center;
+  
+  /* shape */
+  padding: 1rem;
+  max-width: 80%;
+}
+
 .ex-div {
   height: 100vh;
   width: 100vw;
 }
+
+#carousel-next {
+  position: absolute;
+  right: 0;
+  border-radius: 0 0 0 1.25rem;
+}
+
+#carousel-prev {
+  position: absolute;
+  left: 0;
+  border-radius: 0 0 1.25rem 0;
+  display: none;
+
+}
+
+.carousel-btn {
+  background-color: rgba(136, 136, 136, 0);
+  font: bold 4em/1.66 Helvetica, Arial, sans-serif;
+  border: none;
+  color: white;
+  width: 6rem;
+}
+
+
+
 
 
 /* ********************************************
@@ -64,7 +107,7 @@ Experiments
   background-image: radial-gradient(circle at bottom, #ddd, #aaa 40%, #B10073 40%, #28015C)
 }
 
-/* ex4 - Slow gradient, interrupted by zebra striped columns */
+/* ex4 - Slow linear gradient, interrupted by stripes */
 
 #ex4 {
   display: flex;
@@ -78,9 +121,10 @@ Experiments
 }
 
 
-#ex2,
+#ex2, 
 #ex3, 
-#ex4, {
+#ex4 
+  {
   display: none;
 }
 
@@ -91,9 +135,8 @@ Form
 .form-wrapper {
   padding: 1rem;
   width: 15rem;
-  height: 35rem;
-  margin: 2rem auto 0 ;
-  background:  rgba(65, 65, 65, 0.521);
+  height: 29rem;
+  margin: 7.5rem auto 0 ;
   border-radius: 1rem;
 }
 
@@ -109,7 +152,7 @@ form input {
 .form-text {
   display: block;
   font-family: helvetica, arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.1em;
   margin-top: 1rem;
   border-bottom: solid 1px #2e2e2e;
   box-shadow: 0 0 1px #fff;
@@ -143,3 +186,9 @@ Reusable classes
 .show {
   display: block;
 }
+
+.bg-container {
+    background:  rgba(65, 65, 65, 0.521);
+    box-shadow: 0 0 1px #fff;
+}
+

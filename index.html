@@ -9,8 +9,14 @@
   <meta name="viewport" content="width=device-width">  <!-- This instructs the device to make the "width" property the same as the device's actual width.  In other words, it makes 1px actually 1/96th of an inch.  Useful for avoiding issues caused by zooming the viewport on mobile devices.  -->
 </head> 
 <body>
-
   <main>
+    <h1 id="experiment-title">
+      Test Title
+    </h1>
+    <nav>
+      <button id="carousel-next" class="carousel-btn bg-container">></button>
+      <button id="carousel-prev" class="carousel-btn bg-container"><</button>
+    </nav>
     <div id="ex1" title="Heat" class="ex-div">
       <label>HEAT</label>
     </div>
@@ -18,7 +24,7 @@
     <div id="ex3" title="Moonrise" class="ex-div"></div>
     <div id="ex4" title="Striped Gradient Generator" class="ex-div">
       <div id="ex4-white-bg">
-        <div class="form-wrapper">
+        <div class="form-wrapper bg-container">
           <form class="color-input-form">
             <p class="form-text form-label">Enter colors as hexadecimal values (i.e. ff3023).</p>
             <label for="start-color-input" class="form-text form-label">Start of gradient:</label>
@@ -32,13 +38,9 @@
         </div> <!-- /form-wrapper -->
       </div> <!-- /ex4-white-bg -->
     </div> <!-- /ex4 -->
-    <div id="ex5" class="ex-div"></div>
-    <div id="ex6" class="ex-div"></div>
   </main>
-
-  
-  
   <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/carousel.js"></script>
   <script src="js/gradient-generator.js"></script>
 </body>
 </html>

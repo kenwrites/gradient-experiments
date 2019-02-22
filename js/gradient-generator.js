@@ -106,9 +106,9 @@ function get_user_input() {
     start_color = start_color_input.value 
     end_color = end_color_input.value
     intervals = stripes_input.value * 2
-    console.log("start color: " + start_color)
-    console.log("end color: " + end_color)
-    console.log("intervals: " + intervals)
+    // console.log("start color: " + start_color)
+    // console.log("end color: " + end_color)
+    // console.log("intervals: " + intervals)
 }
 
 function make_new_gradient() {
@@ -137,10 +137,10 @@ function make_new_gradient() {
     for (let i = 0; i < intervals; i++) {
         rgb_color_stops.push(write_rgb(i))
     }
-    console.log("intervals: " + intervals)
-    console.log("rgb_color_stops: " + rgb_color_stops)
+    // console.log("intervals: " + intervals)
+    // console.log("rgb_color_stops: " + rgb_color_stops)
     write_gradient_statement()
-    console.log("gradient statement: " + gradient_statement)
+    // console.log("gradient statement: " + gradient_statement)
     ex4.style.backgroundImage = gradient_statement
     rgb_color_stops = []
 
