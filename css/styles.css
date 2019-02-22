@@ -1,11 +1,37 @@
+/* BarrioRegular font Copyright (c) 2013-2015, Omnibus-Type 
+(www.omnibus-type.com omnibus.type@gmail.com)
+This Font Software is licensed under the SIL Open Font License, Version 1.1. */
+
+/* JelleeBold and JellyRoman font Copyright (c) 2015, Alfredo Marco Pradil, 
+with Reserved Font Name Jellee. 
+This Font Software is licensed under the SIL Open Font License. */
+
 @font-face {
   font-family: 'BarrioRegular';
-  src: url('https://fontlibrary.org/assets/fonts/barrio/7281088b662c310651e324f798e03bb0/8fd3ddbd649859dd936b083c5422a5b5/BarrioRegular.ttf') format('truetype');
-  src: url('../fonts/BarrioRegular.eot') format('embedded-opentype');
+    src: url('https://fontlibrary.org/assets/fonts/barrio/7281088b662c310651e324f798e03bb0/8fd3ddbd649859dd936b083c5422a5b5/BarrioRegular.ttf') format('truetype');
+    src: url('../fonts/BarrioRegular.eot') format('embedded-opentype');
   src: url('../fonts/BarrioRegular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
     }
+
+@font-face {
+    font-family: 'JelleeBold';
+        src: url('https://fontlibrary.org/assets/fonts/jellee-typeface/aea0976e8b1d2f2064f862b100437c5e/c0b2818436438def40349318e0c1c48a/JelleeBold.ttf') format('truetype');
+        src: url('../fonts/JelleeBold.eot');
+        src: url('../fonts/JelleeBold.woff');
+    font-weight: bold;
+    font-style: normal;
+      }
+
+@font-face {
+    font-family: 'JelleeRoman';
+        src: url('https://fontlibrary.org/assets/fonts/jellee-typeface/f4108334a11b8b8546382b8942e75f26/09438cae5178fea614cfd0b16e719824/JelleeRoman.ttf') format('truetype');
+        src: url('../fonts/JelleeRoman.eot');
+        src: url('../fonts/JelleeRoman.woff');
+    font-weight: normal;
+    font-style: normal;
+      }
 
 
 
@@ -31,13 +57,13 @@ html {
   transform: translate(-50%, -50%);
   
   /* appearance */
-  background-color: rgba(53, 53, 53, 0.9);
+  background-color: rgba(53, 53, 53);
   box-shadow: 0 0 1px #fff;
   border-radius: 4px;
 
   /* text */
   color: white;
-  font-family: helvetica, arial, sans-serif;
+  font-family: JelleeBold, helvetica, arial, sans-serif;
   font-size: 1.75em;
   text-align: center;
   
@@ -47,7 +73,7 @@ html {
 }
 
 .ex-div {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -68,7 +94,7 @@ html {
 .carousel-btn {
   background:  rgb(65, 65, 65);
   box-shadow: 0 0 1px #fff;
-  font: bold 4em/1.66 Helvetica, Arial, sans-serif;
+  font: bold 4em/1.66 JelleeRoman, Helvetica, Arial, sans-serif;
   border: none;
   color: white;
   width: 6rem;
@@ -152,7 +178,7 @@ Experiments
 }
 
 /* ********************************************
-Form
+Gradient Form
 ******************************************** */
 
 .form-wrapper {
@@ -174,7 +200,7 @@ form input {
 
 .form-text {
   display: block;
-  font-family: helvetica, arial, sans-serif;
+  font-family: JelleeRoman, helvetica, arial, sans-serif;
   font-size: 1.1em;
   margin-top: 1rem;
   border-bottom: solid 1px #2e2e2e;
@@ -198,6 +224,16 @@ form .form-label {
   color: #353535;
 }
 
+.form-btn:focus,
+.form-btn:hover {
+  box-shadow:  0 0 7px  rgba(0, 0, 0) inset;
+  cursor: pointer;
+}
+
+.form-btn:active {
+  background-color: rgb(200, 200, 200);
+}
+
 /* ********************************************
 Reusable classes
 ******************************************** */
@@ -215,3 +251,31 @@ Reusable classes
     box-shadow: 0 0 1px #fff;
 }
 
+.accessibly-hidden {
+  position: absolute; 
+  left: -999em;
+  display: block;
+  visibility: visible;
+}
+
+
+/* ********************************************
+Media Queries
+******************************************** */
+
+@media (min-width: 31.25rem) {
+
+  #experiment-title {
+    /* position */
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+}
+
+@media (orientation: landscape) {
+
+  
+
+}
