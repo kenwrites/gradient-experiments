@@ -30,13 +30,21 @@
         <div class="form-wrapper bg-container">
           <form class="color-input-form">
             <p class="form-text form-label">Enter colors as hexadecimal values (i.e. ff3023).</p>
-            <label for="start-color-input" class="form-text form-label">Start of gradient:</label>
-            <input type="text" id="start-color-input">
-            <label for="end-color-input" class="form-text form-label">End of gradient:</label>
-            <input type="text" id="end-color-input">
-            <label for="stripes-input" class="form-text form-label">Number of stripes:</label>
-            <input type="number" id="stripes-input">
-            <button type="button" id="make-gradient-btn" class="form-text form-btn">Make New Gradient</button>
+            <div class="input-grp">
+              <label for="start-color-input" class="form-text form-label">Start of gradient:</label>
+              <input type="text" id="start-color-input">
+            </div>
+            <div class="input-grp">
+              <label for="end-color-input" class="form-text form-label">End of gradient:</label>
+              <input type="text" id="end-color-input">
+            </div>
+            <div class="input-grp">
+              <label for="stripes-input" class="form-text form-label">Number of stripes:</label>
+              <input type="number" id="stripes-input">
+            </div>
+            <div class="input-grp">          
+              <button type="button" id="make-gradient-btn" class="form-text form-btn input-grp">Make New Gradient</button>
+            </div>
           </form>
         </div> <!-- /form-wrapper -->
       </div> <!-- /ex4-white-bg -->
