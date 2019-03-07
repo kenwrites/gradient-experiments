@@ -104,6 +104,9 @@ html {
 .carousel-btn:focus,
 .carousel-btn:hover {
   box-shadow:  0 0 7px  rgba(255, 255, 255, .8) inset;
+}
+
+.carousel-btn:hover {
   cursor: pointer;
 }
 
